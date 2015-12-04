@@ -1,5 +1,3 @@
-package search;
-
 /* Breadth First Search for 8-Puzzle
 	 * Author : Chirag Agarwal
 */
@@ -62,8 +60,6 @@ public class BFSPuzzle {
 	        if(val!=0 && val!=3 && val!=6){
 	            String s = str.substring(0,val-1)+"0"+str.charAt(val-1)+str.substring(val+1);
 	            add(s,str);
-	            //System.out.println(myMapHistory);
-	            
 	            // Checks whether the respective State is the Goal State
 	            printFlow(s);
 	        }     
@@ -75,7 +71,6 @@ public class BFSPuzzle {
 	        if(val!=2 && val!=5 && val!=8){
 	            String s = str.substring(0,val)+str.charAt(val+1)+"0"+str.substring(val+2);
 	            add(s,str);
-	            //System.out.println(myMapHistory);
 	            // Checks whether the respective State is the Goal State
 	            printFlow(s);
 	        }
@@ -87,7 +82,6 @@ public class BFSPuzzle {
 	        if(val>2){
 	            String s = str.substring(0,val-3)+"0"+str.substring(val-2,val)+str.charAt(val-3)+str.substring(val+1);
 	            add(s,str);
-	            //System.out.println(myMapHistory);
 	            // Checks whether the respective State is the Goal State
 	            printFlow(s);
 	        }     
@@ -99,7 +93,6 @@ public class BFSPuzzle {
 	        if(val<6){
 	            String s = str.substring(0,val)+str.substring(val+3,val+4)+str.substring(val+1,val+3)+"0"+str.substring(val+4);
 	            add(s,str);
-	            //System.out.println(myMapHistory);
 	            // Checks whether the respective State is the Goal State
 	            printFlow(s);
 	        }
@@ -111,7 +104,6 @@ public class BFSPuzzle {
                 String trackState = data;
                 while (trackState != null) {
                 	visualizeFlow(trackState,myMapDepth.get(trackState));
-                    //System.out.println(trackState + " at " + myMapDepth.get(trackState));
                     trackState = myMapHistory.get(trackState);
                 }
                 long endTime   = System.currentTimeMillis();
