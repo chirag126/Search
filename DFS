@@ -1,5 +1,3 @@
-package search;
-
 /* Depth First Search for 8-Puzzle
  * Author : Chirag Agarwal
 */
@@ -190,7 +188,6 @@ public class DFSPuzzle {
 	
 	// Visualizing the Board configuration after each operation
     private void visualizeFlow(String str) {
-    	//System.out.println("Depth: " +n+ "-->");
     	for (int c=0;c<str.length();c++){
     		if(c!=2 && c!=5 && c!=8){
     			if (str.charAt(c) != 0)
